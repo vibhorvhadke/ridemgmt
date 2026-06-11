@@ -1,0 +1,407 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v12.6.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2026-06-11T12:37:40.579Z",
+				"time": 6.42,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/drivers",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"drivername\":\"Kishore\",\n\t\"currentLocation\":\"Nagpur\",\n\t\"available\":\"true\",\n\t\"vehicleType\":\"BIKE\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 11 Jun 2026 12:10:03 GMT"
+						}
+					],
+					"content": {
+						"size": 102,
+						"mimeType": "application/json",
+						"text": "{\"available\":true,\"currentLocation\":\"Nagpur\",\"driverId\":4,\"drivername\":\"Kishore\",\"vehicleType\":\"BIKE\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 6.42,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Create Driver"
+			},
+			{
+				"startedDateTime": "2026-06-11T12:37:40.579Z",
+				"time": 612.043,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/ai/ride",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"message\": \"Book a ride for rider 2 for 6 km\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "37"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 11 Jun 2026 12:25:13 GMT"
+						}
+					],
+					"content": {
+						"size": 37,
+						"mimeType": "text/plain;charset=UTF-8",
+						"text": "Ride booked. Driver: Anup, Fare: 60.0"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 612.043,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "AI Rider"
+			},
+			{
+				"startedDateTime": "2026-06-11T12:37:40.579Z",
+				"time": 8.761,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/riders/registerRide",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\":\"Vaibhav\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 11 Jun 2026 12:10:28 GMT"
+						}
+					],
+					"content": {
+						"size": 30,
+						"mimeType": "application/json",
+						"text": "{\"name\":\"Vaibhav\",\"riderId\":4}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 8.761,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Create Rider"
+			},
+			{
+				"startedDateTime": "2026-06-11T12:37:40.579Z",
+				"time": 707.289,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/rides",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"riderId\":4,\n\t\"distance\":6\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 11 Jun 2026 09:50:20 GMT"
+						}
+					],
+					"content": {
+						"size": 273,
+						"mimeType": "application/json",
+						"text": "{\"distance\":6.0,\"driver\":{\"available\":false,\"currentLocation\":\"Nagpur\",\"driverId\":3,\"drivername\":\"Amit\",\"vehicleType\":\"AUTO\"},\"fareReceipt\":{\"amount\":60.0,\"generatedAt\":\"2026-06-11T15:20:20.7488443\",\"id\":52},\"id\":52,\"rider\":{\"name\":\"Nakul\",\"riderId\":4},\"status\":\"ASSIGNED\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 707.289,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Book Ride"
+			},
+			{
+				"startedDateTime": "2026-06-11T12:37:40.579Z",
+				"time": 7.307,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/riders/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 11 Jun 2026 09:50:45 GMT"
+						}
+					],
+					"content": {
+						"size": 29,
+						"mimeType": "application/json",
+						"text": "{\"name\":\"Vibhor\",\"riderId\":2}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 7.307,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Get Riders"
+			},
+			{
+				"startedDateTime": "2026-06-11T12:37:40.579Z",
+				"time": 400.709,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/drivers",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 11 Jun 2026 12:10:35 GMT"
+						}
+					],
+					"content": {
+						"size": 401,
+						"mimeType": "application/json",
+						"text": "[{\"available\":true,\"currentLocation\":\"Pune\",\"driverId\":1,\"drivername\":\"Anup\",\"vehicleType\":\"CAR\"},{\"available\":true,\"currentLocation\":\"Pune\",\"driverId\":2,\"drivername\":\"Avinash\",\"vehicleType\":\"CAR\"},{\"available\":true,\"currentLocation\":\"Nagpur\",\"driverId\":3,\"drivername\":\"Amit\",\"vehicleType\":\"AUTO\"},{\"available\":true,\"currentLocation\":\"Nagpur\",\"driverId\":4,\"drivername\":\"Kishore\",\"vehicleType\":\"BIKE\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 400.709,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Get All Driver"
+			}
+		]
+	}
+}

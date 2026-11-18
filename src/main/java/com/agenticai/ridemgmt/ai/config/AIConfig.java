@@ -16,7 +16,9 @@ public class AIConfig {
     public RideAgent rideAgent(RideTools rideTools, DriverTools driverTools) {
 
         ChatLanguageModel model = OpenAiChatModel.builder()
-                .apiKey("YOUR API KEY")
+                .baseUrl("https://openrouter.ai/api/v1")
+                .apiKey("sk-or-v1-7------------------")
+                .modelName("openai/gpt-4o-mini")     // OpenRouter model ID
                 .build();
 
         return AiServices.builder(RideAgent.class)
